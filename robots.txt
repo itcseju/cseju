@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cseju.com/sitemap.xml
+Sitemap: https://cseju.com/sitemap.xml
