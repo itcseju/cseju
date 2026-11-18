@@ -438,8 +438,12 @@ p { margin: 0 0 1em; }
 .about-text > h2         { order: 2; }
 .about-figure            { order: 3; margin: 0; }
 .about-text > .justificado,
+.about-text > #nosotros-mas,
+.about-text > .team-toggle,
 .about-text > .mv-grid   { order: 4; }
 
+/* Botón "Ver más": que no se estire a todo el ancho del grid */
+.about-text > .team-toggle { justify-self: start; margin-bottom: 0; }
 /* En el grid de móvil, los elementos con gap de 2.5rem quedan muy
    separados; se compensa para el eyebrow y el título */
 .about-grid { gap: 1.25rem; }
@@ -456,9 +460,10 @@ p { margin: 0 0 1em; }
   .about-text > .eyebrow,
   .about-text > h2,
   .about-text > .justificado,
+  .about-text > #nosotros-mas,
+  .about-text > .team-toggle,
   .about-text > .mv-grid,
   .about-figure { order: 0; }
-
 
   .values { grid-template-columns: repeat(5, 1fr); }
   .values li:last-child:nth-child(odd) { grid-column: auto; }
