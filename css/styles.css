@@ -88,17 +88,6 @@ p { margin: 0 0 1em; }
 }
 .skip-link:focus { left: 0; }
 
-/* ---------- Marcador de contenido pendiente ---------- */
-/* Busca "pendiente" / "COMPLETAR" para encontrar lo que falta. */
-.pendiente {
-  display: inline-block;
-  background: rgba(187, 162, 92, 0.18);
-  border: 1px dashed var(--dorado);
-  border-radius: 6px;
-  padding: .15rem .55rem;
-  font-size: .9rem;
-  color: var(--azul-secundario);
-}
 
 /* ---------- Espacios para imágenes ---------- */
 .img-slot {
@@ -606,6 +595,25 @@ p { margin: 0 0 1em; }
 .contact-list a { word-break: break-word; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: .85rem; }
 
+.social-links { display: flex; gap: .6rem; margin-top: .35rem; }
+.social-links a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--azul-secundario);
+  border: 1px solid var(--borde);
+  transition: background .2s, color .2s, border-color .2s, transform .2s;
+}
+.social-links a:hover,
+.social-links a:focus-visible {
+  background: var(--azul-secundario);
+  border-color: var(--azul-secundario);
+  color: var(--blanco);
+  transform: translateY(-2px);
+}
+
 .contact-form {
   padding: 1.75rem 1.5rem;
   background: var(--fondo-suave);
@@ -686,6 +694,20 @@ p { margin: 0 0 1em; }
 .footer-slogan { font-style: italic; color: var(--dorado); }
 .footer-nav { display: flex; flex-direction: column; gap: .4rem; }
 .footer-contact p { margin: 0 0 .4rem; }
+
+.social-links--footer { margin-top: .9rem; }
+.site-footer .social-links--footer a {
+  width: 38px;
+  height: 38px;
+  color: rgba(255, 255, 255, .85);
+  border-color: rgba(255, 255, 255, .3);
+}
+.site-footer .social-links--footer a:hover,
+.site-footer .social-links--footer a:focus-visible {
+  background: var(--dorado);
+  border-color: var(--dorado);
+  color: var(--azul-marino);
+}
 .footer-bottom {
   padding-top: 1.25rem;
   padding-bottom: 1.5rem;

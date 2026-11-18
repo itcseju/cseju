@@ -122,16 +122,19 @@
     });
   }
 
-  /* ---------- Perfiles del equipo: ver más / ver menos ---------- */
+  /* ---------- Ver más / ver menos (Nosotros y perfiles del equipo) ---------- */
   $$('.team-toggle').forEach((btn) => {
     const panel = document.getElementById(btn.getAttribute('aria-controls'));
     if (!panel) return;
+
+    const textoAbrir = btn.dataset.textoAbrir || 'Ver perfil completo';
+    const textoCerrar = btn.dataset.textoCerrar || 'Ocultar perfil';
 
     btn.addEventListener('click', () => {
       const abierto = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!abierto));
       panel.hidden = abierto;
-      btn.textContent = abierto ? 'Ver perfil completo' : 'Ocultar perfil';
+      btn.textContent = abierto ? textoAbrir : textoCerrar;
     });
   });
 
